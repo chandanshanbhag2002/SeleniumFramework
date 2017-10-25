@@ -67,18 +67,18 @@ public class StartExecution {
 
 			if (browser.toLowerCase().equals("chrome")) {
 				System.setProperty("webdriver.chrome.driver",
-						"D:\\chromedriver.exe");
+						"driver\\ChomeDriver\\chromedriver.exe");
 				
 				driver = new ChromeDriver();
 				driver.manage().window().maximize();
 				
 			} else if (browser.toLowerCase().equals("firefox")) {
 				System.setProperty("webdriver.gecko.driver",
-						"E:\\SELENIUM\\geckodriver-v0.11.1-win64\\geckodriver.exe");
+						"driver\\FFDriver\\geckodriver.exe");
 				driver = new FirefoxDriver();
 			} else if (browser.toLowerCase().equals("ie")) {
 				System.setProperty("webdriver.ie.driver",
-						"E:\\SELENIUM\\IEDriverServer_Win32_2.53.1\\IEDriverServer.exe");
+						"driver\\IEDriver\\IEDriverServer.exe");
 				driver = new InternetExplorerDriver();
 			}
 			driver.get(url);
