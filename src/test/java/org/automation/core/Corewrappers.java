@@ -3,14 +3,8 @@ package org.automation.core;
 import org.automation.main.StartExecution;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.util.concurrent.TimeUnit;
-
 import org.apache.log4j.Logger;
 
-import bsh.This;
 
 public class Corewrappers extends StartExecution {
 

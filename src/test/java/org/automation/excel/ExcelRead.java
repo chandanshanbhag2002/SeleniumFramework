@@ -4,12 +4,10 @@ import java.io.File;
 import java.io.FileInputStream;
 
 import org.apache.log4j.Logger;
-import org.apache.poi.util.SystemOutLogger;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.automation.main.StartExecution;
 
 public class ExcelRead {
 
@@ -21,6 +19,7 @@ public class ExcelRead {
 			logger.info("Reading excel Sheet from TC.xml.");
 			FileInputStream fs = new FileInputStream(
 					new File(filename));
+			@SuppressWarnings("resource")
 			XSSFWorkbook wb = new XSSFWorkbook(fs);
 			XSSFSheet sheet = wb.getSheetAt(0);
 			XSSFRow row = null;
